@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Destructurama.JsonNet</id>
+    <version>$version$</version>
+    <authors>Destructurama Contributors</authors>
+    <description>Adds support for logging JSON.NET dynamic types as structured data with Serilog.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/destructurama</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <iconUrl>http://destructurama.github.io/pages/images/destructurama.png</iconUrl>
+    <tags>serilog json</tags>
+    <dependencies>
+      <dependency id="Serilog" version="1.4.204" />
+      <dependency id="Newtonsoft.Json" version="6.0.8" />
+    </dependencies>
+  </metadata>
+</package>
