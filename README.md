@@ -26,6 +26,6 @@ Any JSON.NET dynamic object can be represented in the log event's properties:
 
 ```csharp
 var obj = JsonConvert.DeserializeObject<dynamic>(someJson);
-Log.Information("Deserialized {@Obj}");
+Log.Information("Deserialized {@Obj}", obj);
 ```
 
