@@ -4,7 +4,7 @@
     <TargetFrameworks>net452;netcoreapp1.1</TargetFrameworks>
     <RootNamespace>Destructurama</RootNamespace>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>C:\Source\Repos\json-net\assets\Destructurama.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\assets\Destructurama.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
     <Authors>Destructurama Contributors</Authors>
     <Description>Adds support for logging JSON.NET dynamic types as structured data with Serilog.</Description>
