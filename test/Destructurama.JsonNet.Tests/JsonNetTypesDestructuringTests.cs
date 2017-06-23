@@ -2,9 +2,9 @@
 using System.Linq;
 using Destructurama.JsonNet.Tests.Support;
 using Newtonsoft.Json;
-using NUnit.Framework;
 using Serilog;
 using Serilog.Events;
+using Xunit;
 
 namespace Destructurama.JsonNet.Tests
 {
@@ -13,10 +13,9 @@ namespace Destructurama.JsonNet.Tests
         public string Name { get; set; }
     }
 
-    [TestFixture]
     public class JsonNetTypesDestructuringTests
     {
-        [Test]
+        [Fact]
         public void AttributesAreConsultedWhenDestructuring()
         {
             LogEvent evt = null;
@@ -46,10 +45,10 @@ namespace Destructurama.JsonNet.Tests
             var sv = (StructureValue)evt.Properties["Dyn"];
             var props = sv.Properties.ToDictionary(p => p.Name, p => p.Value);
 
-            Assert.IsInstanceOf<StructureValue>(props["HN"]);
-            Assert.IsInstanceOf<SequenceValue>(props["Arr"]);
-            Assert.IsInstanceOf<string>(props["S"].LiteralValue());
-            Assert.IsNull(props["E"].LiteralValue());
+            Assert.IsType<StructureValue>(props["HN"]);
+            Assert.IsType<SequenceValue>(props["Arr"]);
+            Assert.IsType<string>(props["S"].LiteralValue());
+            Assert.Null(props["E"].LiteralValue());
 
             // Not currently handled correctly - will serialize as a structure
             // Assert.IsInstanceOf<DictionaryValue>(props["D"]);
