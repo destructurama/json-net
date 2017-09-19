@@ -20,29 +20,21 @@ using Serilog.Events;
 
 namespace Destructurama.JsonNet
 {
-    class JsonNetDestructuringPolicy : IDestructuringPolicy
+    internal class JsonNetDestructuringPolicy : IDestructuringPolicy
     {
         public bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue result)
         {
-            var jo = value as JObject;
-            if (jo != null)
+            switch (value)
             {
-                result = Destructure(jo, propertyValueFactory);
-                return true;
-            }
-
-            var ja = value as JArray;
-            if (ja != null)
-            {
-                result = Destructure(ja, propertyValueFactory);
-                return true;
-            }
-
-            var jv = value as JValue;
-            if (jv != null)
-            {
-                result = Destructure(jv, propertyValueFactory);
-                return true;
+                case JObject jo:
+                    result = Destructure(jo, propertyValueFactory);
+                    return true;
+                case JArray ja:
+                    result = Destructure(ja, propertyValueFactory);
+                    return true;
+                case JValue jv:
+                    result = Destructure(jv, propertyValueFactory);
+                    return true;
             }
 
             result = null;
@@ -69,8 +61,7 @@ namespace Destructurama.JsonNet
             {
                 if (prop.Name == "$type")
                 {
-                    var typeVal = prop.Value as JValue;
-                    if (typeVal != null && typeVal.Value is string)
+                    if (prop.Value is JValue typeVal && typeVal.Value is string)
                     {
                         typeTag = (string)typeVal.Value;
                         continue;
