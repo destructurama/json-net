@@ -15,7 +15,7 @@
     <Product />
     <Company />
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <VersionPrefix>1.2.0</VersionPrefix>
+    <VersionPrefix>1.2.1</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
