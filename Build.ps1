@@ -1,85 +1,50 @@
-param(
-    [String] $majorMinor = "0.0",  # 2.0
-    [String] $patch = "0",         # $env:APPVEYOR_BUILD_VERSION
-    [String] $customLogger = "",   # C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll
-    [Switch] $notouch,
-    [String] $sln                  # e.g serilog-sink-name
-)
+echo "build: Build started"
 
-function Set-AssemblyVersions($informational, $assembly)
-{
-    (Get-Content assets/CommonAssemblyInfo.cs) |
-        ForEach-Object { $_ -replace """1.0.0.0""", """$assembly""" } |
-        ForEach-Object { $_ -replace """1.0.0""", """$informational""" } |
-        ForEach-Object { $_ -replace """1.1.1.1""", """$($informational).0""" } |
-        Set-Content assets/CommonAssemblyInfo.cs
+Push-Location $PSScriptRoot
+
+if(Test-Path .\artifacts) {
+	echo "build: Cleaning .\artifacts"
+	Remove-Item .\artifacts -Force -Recurse
 }
 
-function Install-NuGetPackages($solution)
-{
-    nuget restore $solution
-}
+& dotnet restore --no-cache
 
-function Invoke-MSBuild($solution, $customLogger)
-{
-    if ($customLogger)
-    {
-        msbuild "$solution" /verbosity:minimal /p:Configuration=Release /logger:"$customLogger"
-    }
-    else
-    {
-        msbuild "$solution" /verbosity:minimal /p:Configuration=Release
-    }
-}
+$branch = @{ $true = $env:APPVEYOR_REPO_BRANCH; $false = $(git symbolic-ref --short -q HEAD) }[$env:APPVEYOR_REPO_BRANCH -ne $NULL];
+$revision = @{ $true = "{0:00000}" -f [convert]::ToInt32("0" + $env:APPVEYOR_BUILD_NUMBER, 10); $false = "local" }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
+$suffix = @{ $true = ""; $false = "$($branch.Substring(0, [math]::Min(10,$branch.Length)))-$revision"}[$branch -eq "master" -and $revision -ne "local"]
+$commitHash = $(git rev-parse --short HEAD)
+$buildSuffix = @{ $true = "$($suffix)-$($commitHash)"; $false = "$($branch)-$($commitHash)" }[$suffix -ne ""]
 
-function Invoke-NuGetPackProj($csproj)
-{
-    nuget pack -Prop Configuration=Release -Symbols $csproj
-}
+echo "build: Package version suffix is $suffix"
+echo "build: Build version suffix is $buildSuffix" 
 
-function Invoke-NuGetPackSpec($nuspec, $version)
-{
-    nuget pack $nuspec -Version $version -OutputDirectory ..\..\
-}
+foreach ($src in ls src/*) {
+    Push-Location $src
 
-function Invoke-NuGetPack($version)
-{
-    ls src/**/*.csproj |
-        Where-Object { -not ($_.Name -like "*net40*") } |
-        ForEach-Object { Invoke-NuGetPackProj $_ }
-}
+	echo "build: Packaging project in $src"
 
-function Invoke-Build($majorMinor, $patch, $customLogger, $notouch, $sln)
-{
-    $package="$majorMinor.$patch"
-    $slnfile = "$sln.sln"
-
-    Write-Output "$sln $package"
-
-    if (-not $notouch)
-    {
-        $assembly = "$majorMinor.0.0"
-
-        Write-Output "Assembly version will be set to $assembly"
-        Set-AssemblyVersions $package $assembly
-    }
-
-    Install-NuGetPackages $slnfile
+    & dotnet build -c Release --version-suffix=$buildSuffix
+    if($LASTEXITCODE -ne 0) { exit 1 }    
     
-    Invoke-MSBuild $slnfile $customLogger
+    if ($suffix) {
+	& dotnet pack -c Release --include-source -o ..\..\artifacts --version-suffix=$suffix --no-build
+    } else {
+	& dotnet pack -c Release --include-source -o ..\..\artifacts --no-build
+    }
+    if($LASTEXITCODE -ne 0) { exit 1 }    
 
-    Invoke-NuGetPack $package
+    Pop-Location
 }
 
-$ErrorActionPreference = "Stop"
+foreach ($test in ls test/*.Tests) {
+    Push-Location $test
 
-if (-not $sln)
-{
-    $slnfull = ls *.sln |
-        Where-Object { -not ($_.Name -like "*net40*") } |
-        Select -first 1
+	echo "build: Testing project in $test"
 
-    $sln = $slnfull.BaseName
+    & dotnet test -c Release
+    if($LASTEXITCODE -ne 0) { exit 3 }
+
+    Pop-Location
 }
 
-Invoke-Build $majorMinor $patch $customLogger $notouch $sln
+Pop-Location
