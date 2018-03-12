@@ -21,9 +21,9 @@ namespace Destructurama.JsonNet.Tests
             LogEvent evt = null;
 
             var log = new LoggerConfiguration()
-                 .Destructure.JsonNetTypes()
-                 .WriteTo.Sink(new DelegatingSink(e => evt = e))
-                 .CreateLogger();
+                .Destructure.JsonNetTypes()
+                .WriteTo.Sink(new DelegatingSink(e => evt = e))
+                .CreateLogger();
 
             var test = new
             {
