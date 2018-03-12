@@ -20,58 +20,77 @@ using Serilog.Events;
 
 namespace Destructurama.JsonNet
 {
-    internal class JsonNetDestructuringPolicy : IDestructuringPolicy
-    {
-        public bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue result)
-        {
-            switch (value)
-            {
-                case JObject jo:
-                    result = Destructure(jo, propertyValueFactory);
-                    return true;
-                case JArray ja:
-                    result = Destructure(ja, propertyValueFactory);
-                    return true;
-                case JValue jv:
-                    result = Destructure(jv, propertyValueFactory);
-                    return true;
-            }
+	internal class JsonNetDestructuringPolicy : IDestructuringPolicy
+	{
+		public bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue result)
+		{
+			switch (value)
+			{
+				case JObject jo:
+					result = Destructure(jo, propertyValueFactory);
+					return true;
+				case JArray ja:
+					result = Destructure(ja, propertyValueFactory);
+					return true;
+				case JValue jv:
+					result = Destructure(jv, propertyValueFactory);
+					return true;
+			}
 
-            result = null;
-            return false;
-        }
+			result = null;
+			return false;
+		}
 
-        LogEventPropertyValue Destructure(JValue jv, ILogEventPropertyValueFactory propertyValueFactory)
-        {
-            return propertyValueFactory.CreatePropertyValue(jv.Value, true);
-        }
+		private static LogEventPropertyValue Destructure(JValue jv, ILogEventPropertyValueFactory propertyValueFactory)
+		{
+			return propertyValueFactory.CreatePropertyValue(jv.Value, true);
+		}
 
-        // ReSharper disable once ParameterTypeCanBeEnumerable.Local
-        LogEventPropertyValue Destructure(JArray ja, ILogEventPropertyValueFactory propertyValueFactory)
-        {
-            var elems = ja.Select(t => propertyValueFactory.CreatePropertyValue(t, true));
-            return new SequenceValue(elems);
-        }
+		private static LogEventPropertyValue Destructure(JArray ja, ILogEventPropertyValueFactory propertyValueFactory)
+		{
+			var elems = ja.Select(t => propertyValueFactory.CreatePropertyValue(t, true));
+			return new SequenceValue(elems);
+		}
 
-        LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
-        {
-            string typeTag = null;
-            var props = new List<LogEventProperty>(jo.Count);
-            foreach (var prop in jo.Properties())
-            {
-                if (prop.Name == "$type")
-                {
-                    if (prop.Value is JValue typeVal && typeVal.Value is string)
-                    {
-                        typeTag = (string)typeVal.Value;
-                        continue;
-                    }
-                }
+		private static LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
+		{
+			return jo.Properties().All(prop => LogEventProperty.IsValidName(prop.Name)) ?
+				 DestructureToStructureValue(jo, propertyValueFactory) :
+				 DestructureToDictionaryValue(jo, propertyValueFactory);
+		}
 
-                props.Add(new LogEventProperty(prop.Name, propertyValueFactory.CreatePropertyValue(prop.Value, true)));
-            }
+		private static LogEventPropertyValue DestructureToStructureValue(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
+		{
+			string typeTag = null;
+			var props = new List<LogEventProperty>(jo.Count);
 
-            return new StructureValue(props, typeTag);
-        }
-    }
+			foreach (var prop in jo.Properties())
+			{
+				if (prop.Name == "$type")
+				{
+					if (prop.Value is JValue typeVal && typeVal.Value is string)
+					{
+						typeTag = (string)typeVal.Value;
+						continue;
+					}
+				}
+
+				props.Add(new LogEventProperty(prop.Name, propertyValueFactory.CreatePropertyValue(prop.Value, true)));
+			}
+
+			return new StructureValue(props, typeTag);
+		}
+
+		private static LogEventPropertyValue DestructureToDictionaryValue(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
+		{
+			var elements = jo.Properties().Select(
+				 prop =>
+					  new KeyValuePair<ScalarValue, LogEventPropertyValue>(
+							new ScalarValue(prop.Name),
+							propertyValueFactory.CreatePropertyValue(prop.Value, true)
+					  )
+			);
+			return new DictionaryValue(elements);
+		}
+	}
 }
