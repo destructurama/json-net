@@ -52,14 +52,8 @@ namespace Destructurama.JsonNet
             return new SequenceValue(elems);
         }
 
-        private static LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
-        {
-            return jo.Properties().All(prop => LogEventProperty.IsValidName(prop.Name)) ?
-                 DestructureToStructureValue(jo, propertyValueFactory) :
-                 DestructureToDictionaryValue(jo, propertyValueFactory);
-        }
 
-        private static LogEventPropertyValue DestructureToStructureValue(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
+        private static LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
         {
             string typeTag = null;
             var props = new List<LogEventProperty>(jo.Count);
@@ -74,6 +68,10 @@ namespace Destructurama.JsonNet
                         continue;
                     }
                 }
+                else if (!LogEventProperty.IsValidName(prop.Name))
+                {
+                    return DestructureToDictionaryValue(jo, propertyValueFactory);
+                }
 
                 props.Add(new LogEventProperty(prop.Name, propertyValueFactory.CreatePropertyValue(prop.Value, true)));
             }
@@ -84,11 +82,11 @@ namespace Destructurama.JsonNet
         private static LogEventPropertyValue DestructureToDictionaryValue(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
         {
             var elements = jo.Properties().Select(
-                 prop =>
-                      new KeyValuePair<ScalarValue, LogEventPropertyValue>(
-                            new ScalarValue(prop.Name),
-                            propertyValueFactory.CreatePropertyValue(prop.Value, true)
-                      )
+                prop =>
+                    new KeyValuePair<ScalarValue, LogEventPropertyValue>(
+                        new ScalarValue(prop.Name),
+                        propertyValueFactory.CreatePropertyValue(prop.Value, true)
+                    )
             );
             return new DictionaryValue(elements);
         }
