@@ -31,7 +31,9 @@ namespace Destructurama.JsonNet.Tests
                 Arr = new[] { 1, 2, 3 },
                 S = "Some string",
                 D = new Dictionary<int, string> { { 1, "One" }, { 2, "Two" } },
-                E = (object)null
+                E = (object)null,
+                ESPN = JsonConvert.DeserializeObject("{\"\":\"Empty string property name\"}"),
+                WSPN = JsonConvert.DeserializeObject("{\"\r\n\":\"Whitespace property name\"}")
             };
 
             var ser = JsonConvert.SerializeObject(test, new JsonSerializerSettings
@@ -48,10 +50,10 @@ namespace Destructurama.JsonNet.Tests
             Assert.IsType<StructureValue>(props["HN"]);
             Assert.IsType<SequenceValue>(props["Arr"]);
             Assert.IsType<string>(props["S"].LiteralValue());
+            Assert.IsType<StructureValue>(props["D"]);
             Assert.Null(props["E"].LiteralValue());
-
-            // Not currently handled correctly - will serialize as a structure
-            // Assert.IsInstanceOf<DictionaryValue>(props["D"]);
+            Assert.IsType<DictionaryValue>(props["ESPN"]);
+            Assert.IsType<DictionaryValue>(props["WSPN"]);
         }
     }
 }
