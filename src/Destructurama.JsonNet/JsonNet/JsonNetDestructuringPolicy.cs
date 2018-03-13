@@ -41,22 +41,22 @@ namespace Destructurama.JsonNet
             return false;
         }
 
-        LogEventPropertyValue Destructure(JValue jv, ILogEventPropertyValueFactory propertyValueFactory)
+        private static LogEventPropertyValue Destructure(JValue jv, ILogEventPropertyValueFactory propertyValueFactory)
         {
             return propertyValueFactory.CreatePropertyValue(jv.Value, true);
         }
 
-        // ReSharper disable once ParameterTypeCanBeEnumerable.Local
-        LogEventPropertyValue Destructure(JArray ja, ILogEventPropertyValueFactory propertyValueFactory)
+        private static LogEventPropertyValue Destructure(JArray ja, ILogEventPropertyValueFactory propertyValueFactory)
         {
             var elems = ja.Select(t => propertyValueFactory.CreatePropertyValue(t, true));
             return new SequenceValue(elems);
         }
 
-        LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
+        private static LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
         {
             string typeTag = null;
             var props = new List<LogEventProperty>(jo.Count);
+
             foreach (var prop in jo.Properties())
             {
                 if (prop.Name == "$type")
@@ -67,11 +67,27 @@ namespace Destructurama.JsonNet
                         continue;
                     }
                 }
+                else if (!LogEventProperty.IsValidName(prop.Name))
+                {
+                    return DestructureToDictionaryValue(jo, propertyValueFactory);
+                }
 
                 props.Add(new LogEventProperty(prop.Name, propertyValueFactory.CreatePropertyValue(prop.Value, true)));
             }
 
             return new StructureValue(props, typeTag);
+        }
+
+        private static LogEventPropertyValue DestructureToDictionaryValue(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
+        {
+            var elements = jo.Properties().Select(
+                prop =>
+                    new KeyValuePair<ScalarValue, LogEventPropertyValue>(
+                        new ScalarValue(prop.Name),
+                        propertyValueFactory.CreatePropertyValue(prop.Value, true)
+                    )
+            );
+            return new DictionaryValue(elements);
         }
     }
 }
