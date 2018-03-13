@@ -52,7 +52,6 @@ namespace Destructurama.JsonNet
             return new SequenceValue(elems);
         }
 
-
         private static LogEventPropertyValue Destructure(JObject jo, ILogEventPropertyValueFactory propertyValueFactory)
         {
             string typeTag = null;
