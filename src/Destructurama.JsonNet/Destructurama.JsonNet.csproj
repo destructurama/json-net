@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
     <RootNamespace>Destructurama</RootNamespace>
     <SignAssembly>True</SignAssembly>
     <LangVersion>latest</LangVersion>
@@ -16,7 +16,7 @@
     <Product />
     <Company />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <VersionPrefix>1.2.2</VersionPrefix>
+    <VersionPrefix>2.0.0</VersionPrefix>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
   </PropertyGroup>
 
