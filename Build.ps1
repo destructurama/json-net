@@ -2,7 +2,7 @@ echo "build: Build started"
 
 Push-Location $PSScriptRoot
 
-if(Test-Path .\artifacts) {
+if (Test-Path .\artifacts) {
 	echo "build: Cleaning .\artifacts"
 	Remove-Item .\artifacts -Force -Recurse
 }
@@ -24,14 +24,14 @@ foreach ($src in ls src/*) {
 	echo "build: Packaging project in $src"
 
     & dotnet build -c Release --version-suffix=$buildSuffix
-    if($LASTEXITCODE -ne 0) { exit 1 }    
+    if ($LASTEXITCODE -ne 0) { exit 1 }    
     
     if ($suffix) {
 	& dotnet pack -c Release --include-source -o ..\..\artifacts --version-suffix=$suffix --no-build
     } else {
 	& dotnet pack -c Release --include-source -o ..\..\artifacts --no-build
     }
-    if($LASTEXITCODE -ne 0) { exit 1 }    
+    if ($LASTEXITCODE -ne 0) { exit 1 }    
 
     Pop-Location
 }
@@ -42,7 +42,7 @@ foreach ($test in ls test/*.Tests) {
 	echo "build: Testing project in $test"
 
     & dotnet test -c Release
-    if($LASTEXITCODE -ne 0) { exit 3 }
+    if ($LASTEXITCODE -ne 0) { exit 3 }
 
     Pop-Location
 }
