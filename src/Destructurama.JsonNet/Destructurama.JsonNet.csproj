@@ -16,7 +16,7 @@
     <Product />
     <Company />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <VersionPrefix>2.0.1</VersionPrefix>
+    <VersionPrefix>2.0.2</VersionPrefix>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
   </PropertyGroup>
 
