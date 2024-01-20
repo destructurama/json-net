@@ -2,32 +2,15 @@
 
   <PropertyGroup>
     <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
-    <RootNamespace>Destructurama</RootNamespace>
-    <SignAssembly>True</SignAssembly>
-    <LangVersion>latest</LangVersion>
-    <AssemblyOriginatorKeyFile>..\..\assets\Destructurama.snk</AssemblyOriginatorKeyFile>
-    <DelaySign>False</DelaySign>
-    <Authors>Destructurama Contributors</Authors>
     <Description>Adds support for logging JSON.NET dynamic types as structured data with Serilog.</Description>
-    <PackageTags>serilog json</PackageTags>
-    <PackageProjectUrl>https://github.com/destructurama</PackageProjectUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageIcon>icon.png</PackageIcon>
-    <Product />
-    <Company />
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <VersionPrefix>2.0.1</VersionPrefix>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
+    <RootNamespace>Destructurama</RootNamespace>
+    <PolySharpIncludeRuntimeSupportedAttributes>true</PolySharpIncludeRuntimeSupportedAttributes>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\assets\Destructurama.snk" Link="Destructurama.snk" />
-    <None Include="..\..\assets\icon.png" Pack="true" PackagePath="" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="PolySharp" Version="1.12.1" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
