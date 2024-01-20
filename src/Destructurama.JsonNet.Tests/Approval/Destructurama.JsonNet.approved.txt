@@ -1,0 +1,7 @@
+namespace Destructurama
+{
+    public static class LoggerConfigurationAppSettingsExtensions
+    {
+        public static Serilog.LoggerConfiguration JsonNetTypes(this Serilog.Configuration.LoggerDestructuringConfiguration configuration) { }
+    }
+}
