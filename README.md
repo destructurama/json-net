@@ -3,8 +3,8 @@
 ![License](https://img.shields.io/github/license/destructurama/json-net)
 
 [![codecov](https://codecov.io/gh/destructurama/json-net/branch/master/graph/badge.svg?token=0ZRHIUEQM4)](https://codecov.io/gh/destructurama/json-net)
-[![Nuget](https://img.shields.io/nuget/dt/Destructurama.ByIgnoring)](https://www.nuget.org/packages/Destructurama.ByIgnoring)
-[![Nuget](https://img.shields.io/nuget/v/Destructurama.ByIgnoring)](https://www.nuget.org/packages/Destructurama.ByIgnoring)
+[![Nuget](https://img.shields.io/nuget/dt/Destructurama.JsonNet)](https://www.nuget.org/packages/Destructurama.JsonNet)
+[![Nuget](https://img.shields.io/nuget/v/Destructurama.JsonNet)](https://www.nuget.org/packages/Destructurama.JsonNet)
 
 [![GitHub Release Date](https://img.shields.io/github/release-date/destructurama/json-net?label=released)](https://github.com/destructurama/json-net/releases)
 [![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/destructurama/json-net/latest?label=new+commits)](https://github.com/destructurama/json-net/commits/master)
