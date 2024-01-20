@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{213D204A-57AB-4450-9B11-8BD26B1BCAD3}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\assets\Destructurama.snk = ..\assets\Destructurama.snk
+		Directory.Build.props = Directory.Build.props
+		..\assets\icon.png = ..\assets\icon.png
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{2D04FF69-79ED-43CE-8889-3AF5E8709C20}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\codecov.yml = ..\.github\codecov.yml
+		..\.github\dependabot.yml = ..\.github\dependabot.yml
+		..\.github\labeler.yml = ..\.github\labeler.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{2D8451F7-4B9A-4CD1-9BC0-0176A80E10AF}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\ISSUE_TEMPLATE\bug_report.md = ..\.github\ISSUE_TEMPLATE\bug_report.md
+		..\.github\ISSUE_TEMPLATE\feature_request.md = ..\.github\ISSUE_TEMPLATE\feature_request.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{661B1214-672F-4D5D-97ED-4BDA46BB1A68}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\benchmarks.yml = ..\.github\workflows\benchmarks.yml
+		..\.github\workflows\codeql-analysis.yml = ..\.github\workflows\codeql-analysis.yml
+		..\.github\workflows\label.yml = ..\.github\workflows\label.yml
+		..\.github\workflows\publish-preview.yml = ..\.github\workflows\publish-preview.yml
+		..\.github\workflows\publish-release.yml = ..\.github\workflows\publish-release.yml
+		..\.github\workflows\stale.yml = ..\.github\workflows\stale.yml
+		..\.github\workflows\test.yml = ..\.github\workflows\test.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Destructurama.JsonNet", "Destructurama.JsonNet\Destructurama.JsonNet.csproj", "{F3148C02-AB1F-46E2-9B6B-8113B1BB0172}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Destructurama.JsonNet.Tests", "Destructurama.JsonNet.Tests\Destructurama.JsonNet.Tests.csproj", "{A4F7A8E0-9C53-4B4A-AF4E-02D06EF3C839}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{1304D51F-FEE7-4D28-BE2C-7B60B0F3D217}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3148C02-AB1F-46E2-9B6B-8113B1BB0172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3148C02-AB1F-46E2-9B6B-8113B1BB0172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3148C02-AB1F-46E2-9B6B-8113B1BB0172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3148C02-AB1F-46E2-9B6B-8113B1BB0172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F7A8E0-9C53-4B4A-AF4E-02D06EF3C839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F7A8E0-9C53-4B4A-AF4E-02D06EF3C839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F7A8E0-9C53-4B4A-AF4E-02D06EF3C839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F7A8E0-9C53-4B4A-AF4E-02D06EF3C839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1304D51F-FEE7-4D28-BE2C-7B60B0F3D217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1304D51F-FEE7-4D28-BE2C-7B60B0F3D217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1304D51F-FEE7-4D28-BE2C-7B60B0F3D217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1304D51F-FEE7-4D28-BE2C-7B60B0F3D217}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D8451F7-4B9A-4CD1-9BC0-0176A80E10AF} = {2D04FF69-79ED-43CE-8889-3AF5E8709C20}
+		{661B1214-672F-4D5D-97ED-4BDA46BB1A68} = {2D04FF69-79ED-43CE-8889-3AF5E8709C20}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E880E39-B4F2-4E27-AF13-528DF2CE4651}
+	EndGlobalSection
+EndGlobal
