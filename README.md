@@ -20,7 +20,7 @@
 [![Publish release to Nuget registry](https://github.com/destructurama/json-net/actions/workflows/publish-release.yml/badge.svg)](https://github.com/destructurama/json-net/actions/workflows/publish-release.yml)
 [![CodeQL analysis](https://github.com/destructurama/json-net/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/destructurama/json-net/actions/workflows/codeql-analysis.yml)
 
-Adds support for logging JSON.NET dynamic types as structured data with Serilog.
+Adds support for logging JSON.NET dynamic types as structured data with [Serilog](https://serilog.net).
 
 # Installation
 

@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Ignore Spelling: App
-
 using Destructurama.JsonNet;
 using Serilog;
 using Serilog.Configuration;
@@ -23,7 +21,7 @@ namespace Destructurama;
 /// <summary>
 /// Adds the Destructure.JsonNetTypes() extension to <see cref="LoggerConfiguration"/>.
 /// </summary>
-public static class LoggerConfigurationAppSettingsExtensions
+public static class LoggerConfigurationJsonNetExtensions
 {
     /// <summary>
     /// Enable destructuring of JSON.NET dynamic objects.
