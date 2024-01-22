@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1705916913992,
+  "lastUpdate": 1705936220702,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -150,6 +150,36 @@ window.BENCHMARK_DATA = {
             "value": 2264.9336573282876,
             "unit": "ns",
             "range": "± 8.485789488010608"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9809a175f57bb674f7a39c410a9de1d81e344dde",
+          "message": "Add tests to increase code coverage (#32)",
+          "timestamp": "2024-01-22T18:09:26+03:00",
+          "tree_id": "c1dc6a8a243fce917fdb170046d111b060bc8571",
+          "url": "https://github.com/destructurama/json-net/commit/9809a175f57bb674f7a39c410a9de1d81e344dde"
+        },
+        "date": 1705936220253,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2415.1199449392466,
+            "unit": "ns",
+            "range": "± 7.0006673296372055"
           }
         ]
       }
