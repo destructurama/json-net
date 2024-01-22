@@ -13,11 +13,11 @@
 // limitations under the License.
 
 using BenchmarkDotNet.Attributes;
-using Newtonsoft.Json;
-using Serilog.Core;
-using Serilog;
 using Destructurama;
 using Destructurama.JsonNet;
+using Newtonsoft.Json;
+using Serilog;
+using Serilog.Core;
 
 namespace Benchmarks;
 
