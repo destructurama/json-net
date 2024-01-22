@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1705903810505,
+  "lastUpdate": 1705904509923,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -30,6 +30,36 @@ window.BENCHMARK_DATA = {
             "value": 2035.4098457923303,
             "unit": "ns",
             "range": "± 7.513269390553504"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6a32668e2ee3eb5d97d211a8d7fc4acf5e9e2e14",
+          "message": "Bump Serilog to 3.1.1 (#26)",
+          "timestamp": "2024-01-22T09:20:48+03:00",
+          "tree_id": "8f46d94c654fc32aae1053ebd453f85d85e4af80",
+          "url": "https://github.com/destructurama/json-net/commit/6a32668e2ee3eb5d97d211a8d7fc4acf5e9e2e14"
+        },
+        "date": 1705904509483,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2325.8810572306315,
+            "unit": "ns",
+            "range": "± 9.896052692196491"
           }
         ]
       }
