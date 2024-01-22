@@ -29,8 +29,8 @@ public class JsonNetBenchmarks
     }
 
     private ILogEventPropertyValueFactory _factory = null!;
+    private IDestructuringPolicy _policy = null!;
     private object _value = null!;
-    private readonly JsonNetDestructuringPolicy _policy = new();
 
     [GlobalSetup]
     public void Setup()
@@ -59,6 +59,8 @@ public class JsonNetBenchmarks
         var processor = log.GetType().GetField("_messageTemplateProcessor", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(log)!;
         var converter = processor.GetType().GetField("_propertyValueConverter", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(processor)!;
         _factory = (ILogEventPropertyValueFactory)converter;
+        var policies = (IDestructuringPolicy[])converter.GetType().GetField("_destructuringPolicies", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(converter)!;
+        _policy = policies.First(p => p is JsonNetDestructuringPolicy);
     }
 
     [Benchmark]
