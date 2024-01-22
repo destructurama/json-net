@@ -28,8 +28,10 @@ internal class HasName
 
 public class JsonNetTypesDestructuringTests
 {
-    [Fact]
-    public void AttributesAreConsultedWhenDestructuring()
+    [Theory]
+    [InlineData(TypeNameHandling.Auto)]
+    [InlineData(TypeNameHandling.Objects)]
+    public void AttributesAreConsultedWhenDestructuring(TypeNameHandling typeNameHandling)
     {
         LogEvent evt = null!;
 
@@ -51,7 +53,7 @@ public class JsonNetTypesDestructuringTests
 
         string ser = JsonConvert.SerializeObject(test, new JsonSerializerSettings
         {
-            TypeNameHandling = TypeNameHandling.Auto
+            TypeNameHandling = typeNameHandling
         });
         var dyn = JsonConvert.DeserializeObject<dynamic>(ser);
 
@@ -67,5 +69,20 @@ public class JsonNetTypesDestructuringTests
         props["E"].LiteralValue().ShouldBeNull();
         props["ESPN"].ShouldBeOfType<DictionaryValue>();
         props["WSPN"].ShouldBeOfType<DictionaryValue>();
+
+        foreach (var value in props.Values.OfType<StructureValue>())
+        {
+            if (typeNameHandling == TypeNameHandling.Auto)
+                value.TypeTag.ShouldBeNull();
+            else if (typeNameHandling == TypeNameHandling.Objects)
+                value.TypeTag.ShouldNotBeNull();
+        }
+    }
+
+    [Fact]
+    public void TryDestructure_Should_Return_False_When_Called_With_Null()
+    {
+        var policy = new JsonNetDestructuringPolicy();
+        policy.TryDestructure(null!, null!, out _).ShouldBeFalse();
     }
 }
