@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/github/license/destructurama/json-net)
 
-[![codecov](https://codecov.io/gh/destructurama/json-net/branch/master/graph/badge.svg?token=0ZRHIUEQM4)](https://codecov.io/gh/destructurama/json-net)
+[![codecov](https://codecov.io/gh/destructurama/json-net/graph/badge.svg?token=abGh9D57gU)](https://codecov.io/gh/destructurama/json-net)
 [![Nuget](https://img.shields.io/nuget/dt/Destructurama.JsonNet)](https://www.nuget.org/packages/Destructurama.JsonNet)
 [![Nuget](https://img.shields.io/nuget/v/Destructurama.JsonNet)](https://www.nuget.org/packages/Destructurama.JsonNet)
 
