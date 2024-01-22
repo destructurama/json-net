@@ -14,7 +14,9 @@
 
 using Destructurama.JsonNet.Tests.Support;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Serilog;
+using Serilog.Core;
 using Serilog.Events;
 using Shouldly;
 using Xunit;
@@ -84,5 +86,27 @@ public class JsonNetTypesDestructuringTests
     {
         var policy = new JsonNetDestructuringPolicy();
         policy.TryDestructure(null!, null!, out _).ShouldBeFalse();
+    }
+
+    [Fact]
+    public void TryDestructure_Should_Handle_TypeToken_As_Ordinal_Property_When_Not_String()
+    {
+        var policy = new JsonNetDestructuringPolicy();
+        var o = new JObject(new JProperty("$type", 42));
+        policy.TryDestructure(o, new StubFactory(), out var value).ShouldBeTrue();
+        var sv = value.ShouldBeOfType<StructureValue>();
+        sv.Properties.Count.ShouldBe(1);
+        sv.Properties[0].Name.ShouldBe("$type");
+        sv.Properties[0].Value.LiteralValue().ShouldBe(42);
+    }
+
+    private sealed class StubFactory : ILogEventPropertyValueFactory
+    {
+        public LogEventPropertyValue CreatePropertyValue(object? value, bool destructureObjects = false)
+        {
+            return ((JToken)value!).Value<int>() == 42
+                ? (LogEventPropertyValue)new ScalarValue(42)
+                : throw new NotImplementedException();
+        }
     }
 }
