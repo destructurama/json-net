@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1705904509923,
+  "lastUpdate": 1705905723040,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -60,6 +60,36 @@ window.BENCHMARK_DATA = {
             "value": 2325.8810572306315,
             "unit": "ns",
             "range": "± 9.896052692196491"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "distinct": true,
+          "id": "a52ba958e3f75ca2d41a355268d0f3a327e4ea6e",
+          "message": "Add performance labeling",
+          "timestamp": "2024-01-22T09:40:57+03:00",
+          "tree_id": "96886bf3561e5e35f977120d869d56bb411dcd8e",
+          "url": "https://github.com/destructurama/json-net/commit/a52ba958e3f75ca2d41a355268d0f3a327e4ea6e"
+        },
+        "date": 1705905721996,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2382.970774723933,
+            "unit": "ns",
+            "range": "± 8.54179685816551"
           }
         ]
       }
