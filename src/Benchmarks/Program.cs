@@ -15,9 +15,7 @@
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Running;
-using Benchmarks;
 
-new JsonNetBenchmarks().Setup();
 var config = ManualConfig
   .Create(DefaultConfig.Instance)
   .AddDiagnoser(MemoryDiagnoser.Default);

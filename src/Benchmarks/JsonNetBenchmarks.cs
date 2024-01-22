@@ -13,19 +13,57 @@
 // limitations under the License.
 
 using BenchmarkDotNet.Attributes;
+using Destructurama;
+using Destructurama.JsonNet;
+using Newtonsoft.Json;
+using Serilog;
+using Serilog.Core;
 
 namespace Benchmarks;
 
 public class JsonNetBenchmarks
 {
+    private class HasName
+    {
+        public string? Name { get; set; }
+    }
+
+    private ILogEventPropertyValueFactory _factory = null!;
+    private object _value = null!;
+    private readonly JsonNetDestructuringPolicy _policy = new();
+
     [GlobalSetup]
     public void Setup()
     {
+        var test = new
+        {
+            HN = new HasName { Name = "Some name" },
+            Arr = new[] { 1, 2, 3 },
+            S = "Some string",
+            D = new Dictionary<int, string> { { 1, "One" }, { 2, "Two" } },
+            E = (object?)null,
+            ESPN = JsonConvert.DeserializeObject("{\"\":\"Empty string property name\"}"),
+            WSPN = JsonConvert.DeserializeObject("{\"\r\n\":\"Whitespace property name\"}")
+        };
+
+        string ser = JsonConvert.SerializeObject(test, new JsonSerializerSettings
+        {
+            TypeNameHandling = TypeNameHandling.Auto
+        });
+        _value = JsonConvert.DeserializeObject<dynamic>(ser)!;
+
+        var log = new LoggerConfiguration()
+            .Destructure.JsonNetTypes()
+            .CreateLogger();
+
+        var processor = log.GetType().GetField("_messageTemplateProcessor", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(log)!;
+        var converter = processor.GetType().GetField("_propertyValueConverter", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(processor)!;
+        _factory = (ILogEventPropertyValueFactory)converter;
     }
 
-    //[Benchmark]
-    public void Execute()
+    [Benchmark]
+    public void Destructure()
     {
-        //TODO: implement
+        _policy.TryDestructure(_value, _factory, out _);
     }
 }
