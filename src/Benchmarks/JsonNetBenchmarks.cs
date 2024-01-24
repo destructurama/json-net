@@ -52,15 +52,20 @@ public class JsonNetBenchmarks
         });
         _value = JsonConvert.DeserializeObject<dynamic>(ser)!;
 
-        var log = new LoggerConfiguration()
-            .Destructure.JsonNetTypes()
-            .CreateLogger();
+        (_policy, _factory) = Build(c => c.Destructure.JsonNetTypes());
+    }
 
-        var processor = log.GetType().GetField("_messageTemplateProcessor", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(log)!;
+    private static (IDestructuringPolicy, ILogEventPropertyValueFactory) Build(Func<LoggerConfiguration, LoggerConfiguration> configure)
+    {
+        var configuration = new LoggerConfiguration();
+        var logger = configure(configuration).CreateLogger();
+
+        var processor = logger.GetType().GetField("_messageTemplateProcessor", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(logger)!;
         var converter = processor.GetType().GetField("_propertyValueConverter", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(processor)!;
-        _factory = (ILogEventPropertyValueFactory)converter;
+        var factory = (ILogEventPropertyValueFactory)converter;
         var policies = (IDestructuringPolicy[])converter.GetType().GetField("_destructuringPolicies", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!.GetValue(converter)!;
-        _policy = policies.First(p => p is JsonNetDestructuringPolicy);
+        var policy = policies.First(p => p is JsonNetDestructuringPolicy);
+        return (policy, factory);
     }
 
     [Benchmark]
