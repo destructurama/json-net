@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1706634923067,
+  "lastUpdate": 1706795933460,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -330,6 +330,36 @@ window.BENCHMARK_DATA = {
             "value": 2220.5280156816757,
             "unit": "ns",
             "range": "± 6.565855327223003"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ea96875b9713361bf0a7598ae40ec53a78e20a86",
+          "message": "Bump codecov/codecov-action from 3 to 4 (#34)\n\n* Bump codecov/codecov-action from 3 to 4\r\n\r\nBumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 3 to 4.\r\n- [Release notes](https://github.com/codecov/codecov-action/releases)\r\n- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)\r\n- [Commits](https://github.com/codecov/codecov-action/compare/v3...v4)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: codecov/codecov-action\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\n\r\n* 1\r\n\r\n---------\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\r\nCo-authored-by: Ivan Maximov <sungam3r@yandex.ru>",
+          "timestamp": "2024-02-01T16:57:52+03:00",
+          "tree_id": "f859cdfb5ce7ca7f005d2d85406f6e87568313b5",
+          "url": "https://github.com/destructurama/json-net/commit/ea96875b9713361bf0a7598ae40ec53a78e20a86"
+        },
+        "date": 1706795932485,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2297.3484723409015,
+            "unit": "ns",
+            "range": "± 12.621559771805275"
           }
         ]
       }
