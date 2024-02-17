@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1707368242437,
+  "lastUpdate": 1708169220760,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -390,6 +390,36 @@ window.BENCHMARK_DATA = {
             "value": 2265.6245178222657,
             "unit": "ns",
             "range": "± 15.10530333464581"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "91199b25d2bc7750a2bc7fa0f50d4b07ca201898",
+          "message": "Bump xunit.runner.visualstudio from 2.5.6 to 2.5.7 (#36)\n\nBumps [xunit.runner.visualstudio](https://github.com/xunit/visualstudio.xunit) from 2.5.6 to 2.5.7.\r\n- [Release notes](https://github.com/xunit/visualstudio.xunit/releases)\r\n- [Commits](https://github.com/xunit/visualstudio.xunit/compare/2.5.6...2.5.7)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit.runner.visualstudio\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-02-17T14:25:54+03:00",
+          "tree_id": "d193b22f0264de7dead8d777aadb3aa17d941947",
+          "url": "https://github.com/destructurama/json-net/commit/91199b25d2bc7750a2bc7fa0f50d4b07ca201898"
+        },
+        "date": 1708169219872,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2303.872666495187,
+            "unit": "ns",
+            "range": "± 19.029109590589602"
           }
         ]
       }
