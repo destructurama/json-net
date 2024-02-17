@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1708169220760,
+  "lastUpdate": 1708169863028,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -420,6 +420,36 @@ window.BENCHMARK_DATA = {
             "value": 2303.872666495187,
             "unit": "ns",
             "range": "± 19.029109590589602"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c7fed3336a017b1d01b76cd3adcc390f25d599ad",
+          "message": "Bump xunit from 2.6.6 to 2.7.0 (#37)\n\nBumps [xunit](https://github.com/xunit/xunit) from 2.6.6 to 2.7.0.\r\n- [Commits](https://github.com/xunit/xunit/compare/2.6.6...2.7.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-02-17T14:36:44+03:00",
+          "tree_id": "82826331384ae06d0c126c9198b03f13f8948526",
+          "url": "https://github.com/destructurama/json-net/commit/c7fed3336a017b1d01b76cd3adcc390f25d599ad"
+        },
+        "date": 1708169862639,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2193.7437262901894,
+            "unit": "ns",
+            "range": "± 14.377078576246538"
           }
         ]
       }
