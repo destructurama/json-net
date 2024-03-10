@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1708514469787,
+  "lastUpdate": 1710090777924,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -480,6 +480,36 @@ window.BENCHMARK_DATA = {
             "value": 2235.5153247288295,
             "unit": "ns",
             "range": "± 17.727952570383216"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "356b09391424a627d17311a46609e1dcd39240e9",
+          "message": "Bump MinVer from 4.3.0 to 5.0.0 (#39)\n\nBumps [MinVer](https://github.com/adamralph/minver) from 4.3.0 to 5.0.0.\r\n- [Changelog](https://github.com/adamralph/minver/blob/main/CHANGELOG.md)\r\n- [Commits](https://github.com/adamralph/minver/compare/4.3.0...5.0.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: MinVer\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-03-10T20:11:50+03:00",
+          "tree_id": "85eee51013c366de71bfc9043a397c2216f6ee95",
+          "url": "https://github.com/destructurama/json-net/commit/356b09391424a627d17311a46609e1dcd39240e9"
+        },
+        "date": 1710090777434,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2175.822277069092,
+            "unit": "ns",
+            "range": "± 8.77230449249856"
           }
         ]
       }
