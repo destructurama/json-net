@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1733987593509,
+  "lastUpdate": 1733997894120,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -660,6 +660,36 @@ window.BENCHMARK_DATA = {
             "value": 2345.775646209717,
             "unit": "ns",
             "range": "± 8.281902197614722"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0bfef6b9251de6775818b157d38aa9af2cc1a9a4",
+          "message": "Bump Microsoft.NET.Test.Sdk from 17.9.0 to 17.10.0 (#46)\n\nBumps [Microsoft.NET.Test.Sdk](https://github.com/microsoft/vstest) from 17.9.0 to 17.10.0.\r\n- [Release notes](https://github.com/microsoft/vstest/releases)\r\n- [Changelog](https://github.com/microsoft/vstest/blob/main/docs/releases.md)\r\n- [Commits](https://github.com/microsoft/vstest/compare/v17.9.0...v17.10.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Microsoft.NET.Test.Sdk\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\r\nCo-authored-by: Ivan Maximov <sungam3r@yandex.ru>",
+          "timestamp": "2024-12-12T13:03:52+03:00",
+          "tree_id": "6033b6a7173cdd1267290b09c6ad95bed0a24d60",
+          "url": "https://github.com/destructurama/json-net/commit/0bfef6b9251de6775818b157d38aa9af2cc1a9a4"
+        },
+        "date": 1733997893678,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2224.7276944478353,
+            "unit": "ns",
+            "range": "± 17.671394904741387"
           }
         ]
       }
