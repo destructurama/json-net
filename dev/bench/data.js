@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1733987059710,
+  "lastUpdate": 1733987593509,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -630,6 +630,36 @@ window.BENCHMARK_DATA = {
             "value": 2401.486767323812,
             "unit": "ns",
             "range": "± 18.649689862348534"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1e4465ae6276e00e319384f6422f441b2a9f0e81",
+          "message": "Bump xunit.runner.visualstudio from 2.5.7 to 2.8.0 (#45)\n\nBumps [xunit.runner.visualstudio](https://github.com/xunit/visualstudio.xunit) from 2.5.7 to 2.8.0.\r\n- [Release notes](https://github.com/xunit/visualstudio.xunit/releases)\r\n- [Commits](https://github.com/xunit/visualstudio.xunit/compare/2.5.7...2.8.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit.runner.visualstudio\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\r\nCo-authored-by: Ivan Maximov <sungam3r@yandex.ru>",
+          "timestamp": "2024-12-12T10:12:15+03:00",
+          "tree_id": "e906bc74d180e3f691c4284edd43b6b766fb9803",
+          "url": "https://github.com/destructurama/json-net/commit/1e4465ae6276e00e319384f6422f441b2a9f0e81"
+        },
+        "date": 1733987592681,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2345.775646209717,
+            "unit": "ns",
+            "range": "± 8.281902197614722"
           }
         ]
       }
