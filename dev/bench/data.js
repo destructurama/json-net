@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734273473369,
+  "lastUpdate": 1734273743272,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -750,6 +750,36 @@ window.BENCHMARK_DATA = {
             "value": 2271.1476501464845,
             "unit": "ns",
             "range": "± 17.30301912032265"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d47fb343d3171bffb62c70f8f380996aee9987fa",
+          "message": "Bump PolySharp from 1.14.1 to 1.15.0 in /src (#49)\n\nBumps [PolySharp](https://github.com/Sergio0694/PolySharp) from 1.14.1 to 1.15.0.\r\n- [Release notes](https://github.com/Sergio0694/PolySharp/releases)\r\n- [Commits](https://github.com/Sergio0694/PolySharp/compare/1.14.1...1.15.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: PolySharp\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-12-15T17:41:24+03:00",
+          "tree_id": "b64792b8468380617526bcd51a3984edd1703927",
+          "url": "https://github.com/destructurama/json-net/commit/d47fb343d3171bffb62c70f8f380996aee9987fa"
+        },
+        "date": 1734273742405,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2433.301658630371,
+            "unit": "ns",
+            "range": "± 18.15585886920561"
           }
         ]
       }
