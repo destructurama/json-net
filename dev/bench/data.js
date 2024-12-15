@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734273849405,
+  "lastUpdate": 1734275683195,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -900,6 +900,36 @@ window.BENCHMARK_DATA = {
             "value": 2246.861621348063,
             "unit": "ns",
             "range": "± 26.04052463792918"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e76d34c64e1c8671f975436d1be7d391e1d57089",
+          "message": "Bump xunit.runner.visualstudio from 2.8.0 to 2.8.2 in /src (#56)\n\nBumps [xunit.runner.visualstudio](https://github.com/xunit/visualstudio.xunit) from 2.8.0 to 2.8.2.\r\n- [Release notes](https://github.com/xunit/visualstudio.xunit/releases)\r\n- [Commits](https://github.com/xunit/visualstudio.xunit/compare/2.8.0...2.8.2)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit.runner.visualstudio\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-12-15T18:13:19+03:00",
+          "tree_id": "3ed82ab3acd1b5e180cdd3a0a36e0bf04ba34eb6",
+          "url": "https://github.com/destructurama/json-net/commit/e76d34c64e1c8671f975436d1be7d391e1d57089"
+        },
+        "date": 1734275682942,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2247.9006573813303,
+            "unit": "ns",
+            "range": "± 21.294409450551438"
           }
         ]
       }
