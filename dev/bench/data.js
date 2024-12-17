@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734277303700,
+  "lastUpdate": 1734439208577,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1020,6 +1020,36 @@ window.BENCHMARK_DATA = {
             "value": 2112.547802480062,
             "unit": "ns",
             "range": "± 19.34441271188061"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "92594ba3ed018c6dcadec9acde7cb9f9f3c1caa9",
+          "message": "Bump xunit.runner.visualstudio from 2.8.2 to 3.0.0 in /src (#59)\n\nBumps [xunit.runner.visualstudio](https://github.com/xunit/visualstudio.xunit) from 2.8.2 to 3.0.0.\r\n- [Release notes](https://github.com/xunit/visualstudio.xunit/releases)\r\n- [Commits](https://github.com/xunit/visualstudio.xunit/compare/2.8.2...3.0.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit.runner.visualstudio\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2024-12-17T15:39:03+03:00",
+          "tree_id": "51f402568469556bed7273747ed29ba54f6f742a",
+          "url": "https://github.com/destructurama/json-net/commit/92594ba3ed018c6dcadec9acde7cb9f9f3c1caa9"
+        },
+        "date": 1734439207691,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2058.7277190264535,
+            "unit": "ns",
+            "range": "± 30.680889086813774"
           }
         ]
       }
