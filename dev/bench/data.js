@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1735914873828,
+  "lastUpdate": 1735915577110,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1140,6 +1140,36 @@ window.BENCHMARK_DATA = {
             "value": 2122.0091631753103,
             "unit": "ns",
             "range": "± 26.923687813605646"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "64e081d51d53712efdd9eb56cced807701dcbc39",
+          "message": "Use SourceLink from SDK (#62)",
+          "timestamp": "2025-01-03T17:45:19+03:00",
+          "tree_id": "e0d921bf774b424402ebdd6cbc8dee075cd8517f",
+          "url": "https://github.com/destructurama/json-net/commit/64e081d51d53712efdd9eb56cced807701dcbc39"
+        },
+        "date": 1735915576652,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2050.176609166463,
+            "unit": "ns",
+            "range": "± 13.723017616348308"
           }
         ]
       }
