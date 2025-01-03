@@ -118,7 +118,7 @@ public class JsonNetTypesDestructuringTests
         public LogEventPropertyValue CreatePropertyValue(object? value, bool destructureObjects = false)
         {
             if (value is JArray arr && arr.Values<int>().SequenceEqual([1, 2, 3]))
-                return new SequenceValue(new[] { new ScalarValue(1), new ScalarValue(2), new ScalarValue(3) });
+                return new SequenceValue([new ScalarValue(1), new ScalarValue(2), new ScalarValue(3)]);
 
             if (value is JToken t && t.Value<int>() == 42)
                 return new ScalarValue(42);

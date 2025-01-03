@@ -21,6 +21,7 @@
 [![CodeQL analysis](https://github.com/destructurama/json-net/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/destructurama/json-net/actions/workflows/codeql-analysis.yml)
 
 Adds support for logging JSON.NET dynamic types as structured data with [Serilog](https://serilog.net).
+For System.Text.Json dynamic types see [this repo](https://github.com/destructurama/system-text-json).
 
 # Installation
 
