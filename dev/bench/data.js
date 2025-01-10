@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1735921416133,
+  "lastUpdate": 1736537851770,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1200,6 +1200,36 @@ window.BENCHMARK_DATA = {
             "value": 2032.4478442852314,
             "unit": "ns",
             "range": "± 7.429486985545848"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d628e1ee56737baf8ee1c988ecd3c146dcd6f790",
+          "message": "Bump xunit.runner.visualstudio from 3.0.0 to 3.0.1 in /src (#63)\n\nBumps [xunit.runner.visualstudio](https://github.com/xunit/visualstudio.xunit) from 3.0.0 to 3.0.1.\r\n- [Release notes](https://github.com/xunit/visualstudio.xunit/releases)\r\n- [Commits](https://github.com/xunit/visualstudio.xunit/compare/3.0.0...3.0.1)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit.runner.visualstudio\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-01-10T22:36:31+03:00",
+          "tree_id": "f13747278becfe4c836308491edb0c246f51f42b",
+          "url": "https://github.com/destructurama/json-net/commit/d628e1ee56737baf8ee1c988ecd3c146dcd6f790"
+        },
+        "date": 1736537851332,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2104.5552447636924,
+            "unit": "ns",
+            "range": "± 11.155540760251272"
           }
         ]
       }
