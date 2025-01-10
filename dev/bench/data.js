@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1736537851770,
+  "lastUpdate": 1736541553985,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1230,6 +1230,36 @@ window.BENCHMARK_DATA = {
             "value": 2104.5552447636924,
             "unit": "ns",
             "range": "± 11.155540760251272"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9f72e08db16fa9af193f2d99e363fd379239d931",
+          "message": "Bump xunit from 2.9.2 to 2.9.3 in /src (#64)\n\nBumps [xunit](https://github.com/xunit/xunit) from 2.9.2 to 2.9.3.\r\n- [Commits](https://github.com/xunit/xunit/compare/v2-2.9.2...v2-2.9.3)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: xunit\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-01-10T23:38:12+03:00",
+          "tree_id": "c6129f7c75a0b49374d35b3e952b706b64956255",
+          "url": "https://github.com/destructurama/json-net/commit/9f72e08db16fa9af193f2d99e363fd379239d931"
+        },
+        "date": 1736541553101,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2172.404628208705,
+            "unit": "ns",
+            "range": "± 7.903794942470941"
           }
         ]
       }
