@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1736541553985,
+  "lastUpdate": 1737372573433,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1260,6 +1260,36 @@ window.BENCHMARK_DATA = {
             "value": 2172.404628208705,
             "unit": "ns",
             "range": "± 7.903794942470941"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "263e0abbf18827910a5958ca08aa43c6cb2f8666",
+          "message": "Bump coverlet.msbuild from 6.0.3 to 6.0.4 in /src (#65)\n\nBumps [coverlet.msbuild](https://github.com/coverlet-coverage/coverlet) from 6.0.3 to 6.0.4.\r\n- [Release notes](https://github.com/coverlet-coverage/coverlet/releases)\r\n- [Commits](https://github.com/coverlet-coverage/coverlet/compare/v6.0.3...v6.0.4)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: coverlet.msbuild\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-01-20T14:28:35+03:00",
+          "tree_id": "f0c9b58518bea6538ec0730557cc8c81e65ead23",
+          "url": "https://github.com/destructurama/json-net/commit/263e0abbf18827910a5958ca08aa43c6cb2f8666"
+        },
+        "date": 1737372573121,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2113.2984837123327,
+            "unit": "ns",
+            "range": "± 20.402565948229572"
           }
         ]
       }
