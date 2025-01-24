@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1737372573433,
+  "lastUpdate": 1737724148977,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1290,6 +1290,36 @@ window.BENCHMARK_DATA = {
             "value": 2113.2984837123327,
             "unit": "ns",
             "range": "± 20.402565948229572"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b5c97d01bfe924dd7b1c4d48a340e2ae7a236687",
+          "message": "Bump Shouldly from 4.2.1 to 4.3.0 in /src (#66)\n\nBumps [Shouldly](https://github.com/shouldly/shouldly) from 4.2.1 to 4.3.0.\r\n- [Release notes](https://github.com/shouldly/shouldly/releases)\r\n- [Changelog](https://github.com/shouldly/shouldly/blob/master/BREAKING%20CHANGES.txt)\r\n- [Commits](https://github.com/shouldly/shouldly/compare/4.2.1...4.3.0)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: Shouldly\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-01-24T16:08:12+03:00",
+          "tree_id": "3ac16dec6e681d1cfe3e51ece89acc7ce0a24d49",
+          "url": "https://github.com/destructurama/json-net/commit/b5c97d01bfe924dd7b1c4d48a340e2ae7a236687"
+        },
+        "date": 1737724148657,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2014.7706396920341,
+            "unit": "ns",
+            "range": "± 15.695600465908326"
           }
         ]
       }
