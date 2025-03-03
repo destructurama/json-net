@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739716778951,
+  "lastUpdate": 1741010662771,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1380,6 +1380,36 @@ window.BENCHMARK_DATA = {
             "value": 2172.321524556478,
             "unit": "ns",
             "range": "± 14.393531929411397"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4d1b19002be7230d0b2804ef9fd4cce2500435a8",
+          "message": "Bump PublicApiGenerator from 11.4.2 to 11.4.5 in /src (#71)\n\nBumps [PublicApiGenerator](https://github.com/PublicApiGenerator/PublicApiGenerator) from 11.4.2 to 11.4.5.\r\n- [Release notes](https://github.com/PublicApiGenerator/PublicApiGenerator/releases)\r\n- [Commits](https://github.com/PublicApiGenerator/PublicApiGenerator/compare/11.4.2...11.4.5)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: PublicApiGenerator\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-03-03T17:03:17+03:00",
+          "tree_id": "cdceb87a8f6b2229ab3573a06da9b6193b3b5b5c",
+          "url": "https://github.com/destructurama/json-net/commit/4d1b19002be7230d0b2804ef9fd4cce2500435a8"
+        },
+        "date": 1741010662345,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2053.558401652745,
+            "unit": "ns",
+            "range": "± 12.803286957479015"
           }
         ]
       }
