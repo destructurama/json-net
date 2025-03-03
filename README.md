@@ -36,16 +36,41 @@ Install-Package Destructurama.JsonNet
 Modify logger configuration:
 
 ```csharp
-var log = new LoggerConfiguration()
-  .Destructure.JsonNetTypes()
-  ...
+var log = new LoggerConfiguration().Destructure.JsonNetTypes()
 ```
 
-Any JSON.NET dynamic object can be represented in the log event's properties:
+Now any JSON.NET dynamic object can be represented in the log event's properties:
 
 ```csharp
-var obj = JsonConvert.DeserializeObject<dynamic>(someJson);
-Log.Information("Deserialized {@Obj}", obj);
+using Destructurama;
+using Newtonsoft.Json;
+using Serilog;
+
+var logger1 = new LoggerConfiguration().WriteTo.Console().CreateLogger();
+var logger2 = new LoggerConfiguration().Destructure.JsonNetTypes().WriteTo.Console().CreateLogger();
+
+var json = """
+    {
+      "name": "Tom",
+      "age": 42,
+      "isDeveloper": true
+    }
+    """;
+
+var obj = JsonConvert.DeserializeObject<dynamic>(json);
+
+logger1.Information("Deserialized without JsonNetTypes(): {@Obj}", obj);
+
+logger2.Information("Deserialized with JsonNetTypes(): {@Obj}", obj);
+
+Console.ReadKey();
+```
+
+Output:
+
+```
+[20:27:59 INF] Deserialized without JsonNetTypes(): [[[]], [[]], [[]]]
+[20:27:59 INF] Deserialized with JsonNetTypes(): {"name": "Tom", "age": 42, "isDeveloper": true}
 ```
 
 # Benchmarks
