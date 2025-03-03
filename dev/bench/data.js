@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1741010662771,
+  "lastUpdate": 1741025983533,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1410,6 +1410,36 @@ window.BENCHMARK_DATA = {
             "value": 2053.558401652745,
             "unit": "ns",
             "range": "± 12.803286957479015"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "899e72b5a2296ee086517a742999fc8a7351989d",
+          "message": "Add sample (#72)",
+          "timestamp": "2025-03-03T21:18:42+03:00",
+          "tree_id": "b2c71a1768f366d17403b47f8f854f75cc68dada",
+          "url": "https://github.com/destructurama/json-net/commit/899e72b5a2296ee086517a742999fc8a7351989d"
+        },
+        "date": 1741025983107,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2183.619091327374,
+            "unit": "ns",
+            "range": "± 20.65254119972886"
           }
         ]
       }
