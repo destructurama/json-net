@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760032502393,
+  "lastUpdate": 1760032908645,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1740,6 +1740,36 @@ window.BENCHMARK_DATA = {
             "value": 2061.6732111710767,
             "unit": "ns",
             "range": "± 23.563141771929182"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2427d7672f5eb02a62ea05235bfa12a9e02a6745",
+          "message": "Bump xunit.runner.visualstudio from 3.1.0 to 3.1.5 (#97)\n\n---\nupdated-dependencies:\n- dependency-name: xunit.runner.visualstudio\n  dependency-version: 3.1.5\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-09T21:00:46+03:00",
+          "tree_id": "95c9c383a8e43dcf5d2d13608d3e0d7d5358972b",
+          "url": "https://github.com/destructurama/json-net/commit/2427d7672f5eb02a62ea05235bfa12a9e02a6745"
+        },
+        "date": 1760032908076,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2135.952314758301,
+            "unit": "ns",
+            "range": "± 28.94173161430811"
           }
         ]
       }
