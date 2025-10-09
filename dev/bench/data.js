@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1748155655028,
+  "lastUpdate": 1760031772701,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1530,6 +1530,36 @@ window.BENCHMARK_DATA = {
             "value": 2093.354835510254,
             "unit": "ns",
             "range": "± 23.842785340598393"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3538a5942a2ebd4c2f49e8b9415c46336396752b",
+          "message": "Bump BenchmarkDotNet and 2 others (#84)\n\n* Bump BenchmarkDotNet and 3 others\n\nBumps BenchmarkDotNet from 0.14.0 to 0.15.2\nBumps Microsoft.NET.Test.Sdk from 17.13.0 to 17.14.1\nBumps xunit.runner.visualstudio from 3.1.0 to 3.1.3\n\n---\nupdated-dependencies:\n- dependency-name: BenchmarkDotNet\n  dependency-version: 0.15.2\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n- dependency-name: Microsoft.NET.Test.Sdk\n  dependency-version: 17.14.1\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n- dependency-name: xunit.runner.visualstudio\n  dependency-version: 3.1.3\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\n\n* Apply suggestion from @sungam3r\n\n---------\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\nCo-authored-by: Ivan Maximov <sungam3r@yandex.ru>",
+          "timestamp": "2025-10-09T20:41:48+03:00",
+          "tree_id": "66f3931804628da3b16118339166038ffddfbd6d",
+          "url": "https://github.com/destructurama/json-net/commit/3538a5942a2ebd4c2f49e8b9415c46336396752b"
+        },
+        "date": 1760031772198,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2066.73262992272,
+            "unit": "ns",
+            "range": "± 10.265178605436642"
           }
         ]
       }
