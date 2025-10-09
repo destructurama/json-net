@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760032472702,
+  "lastUpdate": 1760032502393,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1710,6 +1710,36 @@ window.BENCHMARK_DATA = {
             "value": 2055.5418373988223,
             "unit": "ns",
             "range": "± 8.271382157434099"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a3d73786766205bffab5355219d4eec4a7026af0",
+          "message": "Bump actions/github-script from 7 to 8 (#94)\n\nBumps [actions/github-script](https://github.com/actions/github-script) from 7 to 8.\n- [Release notes](https://github.com/actions/github-script/releases)\n- [Commits](https://github.com/actions/github-script/compare/v7...v8)\n\n---\nupdated-dependencies:\n- dependency-name: actions/github-script\n  dependency-version: '8'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-09T20:53:53+03:00",
+          "tree_id": "b0260f6ead058435b521036605e684db6691f44e",
+          "url": "https://github.com/destructurama/json-net/commit/a3d73786766205bffab5355219d4eec4a7026af0"
+        },
+        "date": 1760032501323,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2061.6732111710767,
+            "unit": "ns",
+            "range": "± 23.563141771929182"
           }
         ]
       }
