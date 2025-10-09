@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760032011856,
+  "lastUpdate": 1760032150583,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1590,6 +1590,36 @@ window.BENCHMARK_DATA = {
             "value": 2266.7844254629954,
             "unit": "ns",
             "range": "± 14.723101301386714"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "89770a29a025454dc27b59fdd17778b57ab73098",
+          "message": "Bump actions/setup-dotnet from 4 to 5 (#91)\n\nBumps [actions/setup-dotnet](https://github.com/actions/setup-dotnet) from 4 to 5.\n- [Release notes](https://github.com/actions/setup-dotnet/releases)\n- [Commits](https://github.com/actions/setup-dotnet/compare/v4...v5)\n\n---\nupdated-dependencies:\n- dependency-name: actions/setup-dotnet\n  dependency-version: '5'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-09T20:48:12+03:00",
+          "tree_id": "27ef04e979d7bb82d14bf58078637d1cfb866b1c",
+          "url": "https://github.com/destructurama/json-net/commit/89770a29a025454dc27b59fdd17778b57ab73098"
+        },
+        "date": 1760032149525,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1954.4075012207031,
+            "unit": "ns",
+            "range": "± 4.655000351342939"
           }
         ]
       }
