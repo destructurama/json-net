@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760078952408,
+  "lastUpdate": 1760110354401,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1830,6 +1830,36 @@ window.BENCHMARK_DATA = {
             "value": 2009.6468953352708,
             "unit": "ns",
             "range": "± 14.0820666509602"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "035853afb713001a2bea75205ab7a7cbc413bf46",
+          "message": "Bump github/codeql-action from 3 to 4 (#99)\n\nBumps [github/codeql-action](https://github.com/github/codeql-action) from 3 to 4.\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/v3...v4)\n\n---\nupdated-dependencies:\n- dependency-name: github/codeql-action\n  dependency-version: '4'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-10T18:31:31+03:00",
+          "tree_id": "e57890fe2503598ae984b05143f039d884f9edc1",
+          "url": "https://github.com/destructurama/json-net/commit/035853afb713001a2bea75205ab7a7cbc413bf46"
+        },
+        "date": 1760110354016,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1971.8930024367112,
+            "unit": "ns",
+            "range": "± 8.64700818913071"
           }
         ]
       }
