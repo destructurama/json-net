@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760110354401,
+  "lastUpdate": 1760470589487,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1860,6 +1860,36 @@ window.BENCHMARK_DATA = {
             "value": 1971.8930024367112,
             "unit": "ns",
             "range": "± 8.64700818913071"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9f1828c166e28bee57f0c823fab80076f4dde8ef",
+          "message": "Bump PublicApiGenerator from 11.4.6 to 11.5.0 (#105)\n\n---\nupdated-dependencies:\n- dependency-name: PublicApiGenerator\n  dependency-version: 11.5.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-14T22:35:28+03:00",
+          "tree_id": "36b606aa0f1453f22a8d63b8b54ebad13ffdf92a",
+          "url": "https://github.com/destructurama/json-net/commit/9f1828c166e28bee57f0c823fab80076f4dde8ef"
+        },
+        "date": 1760470588979,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2084.428955078125,
+            "unit": "ns",
+            "range": "± 14.060738876023764"
           }
         ]
       }
