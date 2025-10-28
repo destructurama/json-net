@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760470589487,
+  "lastUpdate": 1761647391628,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1890,6 +1890,36 @@ window.BENCHMARK_DATA = {
             "value": 2084.428955078125,
             "unit": "ns",
             "range": "± 14.060738876023764"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "893d53d259250f0c030060606d4083890670cb76",
+          "message": "Bump actions/upload-artifact from 4 to 5 (#112)\n\nBumps [actions/upload-artifact](https://github.com/actions/upload-artifact) from 4 to 5.\n- [Release notes](https://github.com/actions/upload-artifact/releases)\n- [Commits](https://github.com/actions/upload-artifact/compare/v4...v5)\n\n---\nupdated-dependencies:\n- dependency-name: actions/upload-artifact\n  dependency-version: '5'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-28T13:28:50+03:00",
+          "tree_id": "ab2afc291fecf6b0415350542d3b829df057f4a2",
+          "url": "https://github.com/destructurama/json-net/commit/893d53d259250f0c030060606d4083890670cb76"
+        },
+        "date": 1761647391085,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2100.3100850031924,
+            "unit": "ns",
+            "range": "± 16.74784824345371"
           }
         ]
       }
