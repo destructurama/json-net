@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761647391628,
+  "lastUpdate": 1761917990348,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1920,6 +1920,36 @@ window.BENCHMARK_DATA = {
             "value": 2100.3100850031924,
             "unit": "ns",
             "range": "± 16.74784824345371"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "71d4b0e42484f88e04c3fb279ff03a0753f0e3ff",
+          "message": "Bump BenchmarkDotNet from 0.15.4 to 0.15.5 (#113)\n\n---\nupdated-dependencies:\n- dependency-name: BenchmarkDotNet\n  dependency-version: 0.15.5\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-10-31T16:38:53+03:00",
+          "tree_id": "6a5f957ce4f79c73ea29c6e2757afb2748c13b5d",
+          "url": "https://github.com/destructurama/json-net/commit/71d4b0e42484f88e04c3fb279ff03a0753f0e3ff"
+        },
+        "date": 1761917989729,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2057.1253799438477,
+            "unit": "ns",
+            "range": "± 10.621626166341127"
           }
         ]
       }
