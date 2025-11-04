@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761917990348,
+  "lastUpdate": 1762238146619,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -1950,6 +1950,36 @@ window.BENCHMARK_DATA = {
             "value": 2057.1253799438477,
             "unit": "ns",
             "range": "± 10.621626166341127"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3f892500b898b5f93c744b0bf81301facd26a134",
+          "message": "Bump Serilog.Sinks.Console from 6.0.0 to 6.1.1 (#114)\n\n---\nupdated-dependencies:\n- dependency-name: Serilog.Sinks.Console\n  dependency-version: 6.1.1\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-11-04T09:34:49+03:00",
+          "tree_id": "94b56c406990391d9c81ad876af0d05b59eb3c15",
+          "url": "https://github.com/destructurama/json-net/commit/3f892500b898b5f93c744b0bf81301facd26a134"
+        },
+        "date": 1762238145724,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2124.1651512145995,
+            "unit": "ns",
+            "range": "± 30.2983131189738"
           }
         ]
       }
