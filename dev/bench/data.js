@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1763674977632,
+  "lastUpdate": 1764095938284,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2100,6 +2100,36 @@ window.BENCHMARK_DATA = {
             "value": 1986.4274289267403,
             "unit": "ns",
             "range": "± 7.434230800544925"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4de8d17abc5affeabac10896335f1da138b7472b",
+          "message": "Bump actions/checkout from 5 to 6 (#120)\n\nBumps [actions/checkout](https://github.com/actions/checkout) from 5 to 6.\n- [Release notes](https://github.com/actions/checkout/releases)\n- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/checkout/compare/v5...v6)\n\n---\nupdated-dependencies:\n- dependency-name: actions/checkout\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2025-11-25T21:37:44+03:00",
+          "tree_id": "4025e6df56055ae9cc9b8f2e2e65a6fda49b312c",
+          "url": "https://github.com/destructurama/json-net/commit/4de8d17abc5affeabac10896335f1da138b7472b"
+        },
+        "date": 1764095937999,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 2067.4040543692454,
+            "unit": "ns",
+            "range": "± 15.215751350795422"
           }
         ]
       }
