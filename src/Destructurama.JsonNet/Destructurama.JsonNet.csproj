@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog" Version="4.3.0" />
     <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="All" />
     <InternalsVisibleTo Include="Destructurama.JsonNet.Tests, PublicKey=00240000048000009400000006020000002400005253413100040000010001000fe215af9b769897395aac526ca6744222fcf543787b16f58980844d6c49f65bbf0a62502d69646c58f14a8a29ba60d43c85a2a5ef1ed103c9a0e18d6491e4b0bafd2c25e290028d19203d4366ae5651aafd48abaf485588fd6a25fbe23c2c9a644a24337a041966b09cbb73dc3a080bf79564d15a26e97c1bff4f345ee256a9" />
     <InternalsVisibleTo Include="Benchmarks, PublicKey=00240000048000009400000006020000002400005253413100040000010001000fe215af9b769897395aac526ca6744222fcf543787b16f58980844d6c49f65bbf0a62502d69646c58f14a8a29ba60d43c85a2a5ef1ed103c9a0e18d6491e4b0bafd2c25e290028d19203d4366ae5651aafd48abaf485588fd6a25fbe23c2c9a644a24337a041966b09cbb73dc3a080bf79564d15a26e97c1bff4f345ee256a9" />
