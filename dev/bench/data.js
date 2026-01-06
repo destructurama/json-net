@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767045472608,
+  "lastUpdate": 1767692088703,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2310,6 +2310,36 @@ window.BENCHMARK_DATA = {
             "value": 1900.1626660483223,
             "unit": "ns",
             "range": "± 7.104098282093534"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1e952be28d0c8e89916b7be125eddca291a0496b",
+          "message": "Bump MinVer from 6.1.0 to 7.0.0 (#128)\n\n---\nupdated-dependencies:\n- dependency-name: MinVer\n  dependency-version: 7.0.0\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-01-06T12:33:37+03:00",
+          "tree_id": "8d050ec8548862b428c0adb320959d009bd2bec6",
+          "url": "https://github.com/destructurama/json-net/commit/1e952be28d0c8e89916b7be125eddca291a0496b"
+        },
+        "date": 1767692088414,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1776.9545770058264,
+            "unit": "ns",
+            "range": "± 13.02058910654207"
           }
         ]
       }
