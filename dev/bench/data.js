@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767692088703,
+  "lastUpdate": 1768062554284,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2340,6 +2340,36 @@ window.BENCHMARK_DATA = {
             "value": 1776.9545770058264,
             "unit": "ns",
             "range": "± 13.02058910654207"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "56c6d06540c77981ba12ca41212d575b4566a3d0",
+          "message": "Move PublicKey into property (#129)",
+          "timestamp": "2026-01-10T19:28:05+03:00",
+          "tree_id": "18605a399ba602be7302a79cdd7a541cd5d9f41d",
+          "url": "https://github.com/destructurama/json-net/commit/56c6d06540c77981ba12ca41212d575b4566a3d0"
+        },
+        "date": 1768062553447,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1853.1346533457438,
+            "unit": "ns",
+            "range": "± 13.476437589942426"
           }
         ]
       }
