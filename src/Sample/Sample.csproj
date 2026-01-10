@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Destructurama.JsonNet\Destructurama.JsonNet.csproj" />
+    <ProjectReference Include="../Destructurama.JsonNet/Destructurama.JsonNet.csproj" />
   </ItemGroup>
 
 </Project>
