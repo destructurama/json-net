@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768062554284,
+  "lastUpdate": 1768069329720,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2370,6 +2370,36 @@ window.BENCHMARK_DATA = {
             "value": 1853.1346533457438,
             "unit": "ns",
             "range": "± 13.476437589942426"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sungam3r@yandex.ru",
+            "name": "Ivan Maximov",
+            "username": "sungam3r"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f30fdc9133227129092067ad5500131136c17114",
+          "message": "Migrate to globalconfig + DotNetProjectFile.Analyzers (#130)",
+          "timestamp": "2026-01-10T21:20:55+03:00",
+          "tree_id": "94f000fe8b340adffdf9b6dbae2dbb89f17b50be",
+          "url": "https://github.com/destructurama/json-net/commit/f30fdc9133227129092067ad5500131136c17114"
+        },
+        "date": 1768069328804,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1872.314580345154,
+            "unit": "ns",
+            "range": "± 12.864833669192162"
           }
         ]
       }
