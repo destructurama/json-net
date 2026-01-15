@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768069329720,
+  "lastUpdate": 1768495819606,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2400,6 +2400,36 @@ window.BENCHMARK_DATA = {
             "value": 1872.314580345154,
             "unit": "ns",
             "range": "± 12.864833669192162"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fd1fca83652ba0ecbf1670e9c92eae65d7010e84",
+          "message": "Bump xunit.analyzers from 1.26.0 to 1.27.0 (#131)\n\n---\nupdated-dependencies:\n- dependency-name: xunit.analyzers\n  dependency-version: 1.27.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-01-15T19:49:13+03:00",
+          "tree_id": "6a7c8a859272f86e71824b045cc40dd7cd474fda",
+          "url": "https://github.com/destructurama/json-net/commit/fd1fca83652ba0ecbf1670e9c92eae65d7010e84"
+        },
+        "date": 1768495819317,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1855.7101824143353,
+            "unit": "ns",
+            "range": "± 23.97541068261898"
           }
         ]
       }
