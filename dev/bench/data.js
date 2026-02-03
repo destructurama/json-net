@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1770143363975,
+  "lastUpdate": 1770143894452,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2490,6 +2490,36 @@ window.BENCHMARK_DATA = {
             "value": 1861.4428052902222,
             "unit": "ns",
             "range": "± 6.499763667187915"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "626c424c4a5727e4e9c35ae925d4ce61df8554f7",
+          "message": "Bump Newtonsoft.Json from 13.0.3 to 13.0.4 (#118)",
+          "timestamp": "2026-02-03T21:37:01+03:00",
+          "tree_id": "664d84e3e41d715ad950bef962efca62df66e869",
+          "url": "https://github.com/destructurama/json-net/commit/626c424c4a5727e4e9c35ae925d4ce61df8554f7"
+        },
+        "date": 1770143894125,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1760.5195125852313,
+            "unit": "ns",
+            "range": "± 4.858640856813813"
           }
         ]
       }
