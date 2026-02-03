@@ -1,0 +1,35 @@
+<Solution>
+  <Folder Name="/.github/">
+    <File Path="../.github/codecov.yml" />
+    <File Path="../.github/dependabot.yml" />
+    <File Path="../.github/labeler.yml" />
+  </Folder>
+  <Folder Name="/.github/ISSUE_TEMPLATE/">
+    <File Path="../.github/ISSUE_TEMPLATE/bug_report.md" />
+    <File Path="../.github/ISSUE_TEMPLATE/feature_request.md" />
+  </Folder>
+  <Folder Name="/.github/workflows/">
+    <File Path="../.github/workflows/benchmarks.yml" />
+    <File Path="../.github/workflows/codeql-analysis.yml" />
+    <File Path="../.github/workflows/label.yml" />
+    <File Path="../.github/workflows/publish-preview.yml" />
+    <File Path="../.github/workflows/publish-release.yml" />
+    <File Path="../.github/workflows/stale.yml" />
+    <File Path="../.github/workflows/test.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="../.editorconfig" />
+    <File Path="../.gitignore" />
+    <File Path="../.globalconfig" />
+    <File Path="../assets/Destructurama.snk" />
+    <File Path="../assets/icon.png" />
+    <File Path="../CHANGELOG.md" />
+    <File Path="../LICENSE" />
+    <File Path="../README.md" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="Benchmarks/Benchmarks.csproj" />
+  <Project Path="Destructurama.JsonNet.Tests/Destructurama.JsonNet.Tests.csproj" />
+  <Project Path="Destructurama.JsonNet/Destructurama.JsonNet.csproj" />
+  <Project Path="Sample/Sample.csproj" />
+</Solution>
