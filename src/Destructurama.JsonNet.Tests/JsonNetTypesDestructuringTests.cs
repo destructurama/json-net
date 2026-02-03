@@ -19,7 +19,6 @@ using Serilog;
 using Serilog.Core;
 using Serilog.Events;
 using Shouldly;
-using Xunit;
 
 namespace Destructurama.JsonNet.Tests;
 
