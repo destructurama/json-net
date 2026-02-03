@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768495819606,
+  "lastUpdate": 1770142973887,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2430,6 +2430,36 @@ window.BENCHMARK_DATA = {
             "value": 1855.7101824143353,
             "unit": "ns",
             "range": "± 23.97541068261898"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a2c9ba621919757ab0d1c3c6379cfc7a7a13c470",
+          "message": "Bump DotNetProjectFile.Analyzers from 1.8.2 to 1.8.3 (#132)\n\n---\nupdated-dependencies:\n- dependency-name: DotNetProjectFile.Analyzers\n  dependency-version: 1.8.3\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-02-03T21:21:51+03:00",
+          "tree_id": "86432dceaa6915d97e2596d3a783914c6eabbae4",
+          "url": "https://github.com/destructurama/json-net/commit/a2c9ba621919757ab0d1c3c6379cfc7a7a13c470"
+        },
+        "date": 1770142972893,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1932.547201009897,
+            "unit": "ns",
+            "range": "± 11.207854679143917"
           }
         ]
       }
