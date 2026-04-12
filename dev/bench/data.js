@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1776005194559,
+  "lastUpdate": 1776005216071,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2730,6 +2730,36 @@ window.BENCHMARK_DATA = {
             "value": 1837.937922991239,
             "unit": "ns",
             "range": "± 7.345760294482002"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4361f27225a7aff40328834793c2abed8318f464",
+          "message": "Bump codecov/codecov-action from 5 to 6 (#139)\n\nBumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 5 to 6.\n- [Release notes](https://github.com/codecov/codecov-action/releases)\n- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/codecov/codecov-action/compare/v5...v6)\n\n---\nupdated-dependencies:\n- dependency-name: codecov/codecov-action\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-04-12T17:45:34+03:00",
+          "tree_id": "f13960c3e74b9e8786594d0ccf56652bcd0cd4a7",
+          "url": "https://github.com/destructurama/json-net/commit/4361f27225a7aff40328834793c2abed8318f464"
+        },
+        "date": 1776005215795,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1742.6204112126277,
+            "unit": "ns",
+            "range": "± 4.973507080591484"
           }
         ]
       }
