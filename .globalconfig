@@ -41,9 +41,6 @@ dotnet_diagnostic.Proj0501.severity = suggestion
 dotnet_diagnostic.Proj0800.severity = suggestion
 # https://github.com/dotnet-project-file-analyzers/dotnet-project-file-analyzers/blob/main/docs/rules/Proj1003.md
 dotnet_diagnostic.Proj1003.severity = suggestion
-# https://github.com/dotnet-project-file-analyzers/dotnet-project-file-analyzers/blob/main/docs/rules/Proj3000.md
-# TODO: https://github.com/dotnet-project-file-analyzers/dotnet-project-file-analyzers/issues/614
-dotnet_diagnostic.Proj3000.severity = suggestion
 
 # .NET code style settings - "This." and "Me." qualifiers
 # https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-language-conventions?view=vs-2019#this-and-me
