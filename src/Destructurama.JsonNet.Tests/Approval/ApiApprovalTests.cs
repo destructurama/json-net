@@ -15,7 +15,7 @@
 using PublicApiGenerator;
 using Shouldly;
 
-namespace Destructurama.JsonNet.Tests;
+namespace Destructurama.JsonNet.Tests.Approval;
 
 /// <summary>Tests for checking changes to the public API.</summary>
 public class ApiApprovalTests
