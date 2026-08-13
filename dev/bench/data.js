@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1786599536784,
+  "lastUpdate": 1786599638559,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -3000,6 +3000,36 @@ window.BENCHMARK_DATA = {
             "value": 1798.0523480635422,
             "unit": "ns",
             "range": "± 7.451213027458284"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c1e4c357dbe96bcf9f7bd1af3bb74a49bc4cd5b6",
+          "message": "Bump actions/checkout from 6 to 7 (#155)\n\nBumps [actions/checkout](https://github.com/actions/checkout) from 6 to 7.\n- [Release notes](https://github.com/actions/checkout/releases)\n- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/checkout/compare/v6...v7)\n\n---\nupdated-dependencies:\n- dependency-name: actions/checkout\n  dependency-version: '7'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-13T08:39:25+03:00",
+          "tree_id": "41afda2a10047cfdce0aa4b683e4499e913a58fd",
+          "url": "https://github.com/destructurama/json-net/commit/c1e4c357dbe96bcf9f7bd1af3bb74a49bc4cd5b6"
+        },
+        "date": 1786599637535,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1893.8337422688803,
+            "unit": "ns",
+            "range": "± 28.106899053090576"
           }
         ]
       }
