@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1786607153168,
+  "lastUpdate": 1786614794229,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -3180,6 +3180,36 @@ window.BENCHMARK_DATA = {
             "value": 1739.3509165900093,
             "unit": "ns",
             "range": "± 6.534409618244104"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ed938c63c58d2299d52937e0fc60c2b15a609f3b",
+          "message": "Bump DotNetProjectFile.Analyzers from 1.12.2 to 1.15.2 (#158)\n\n---\nupdated-dependencies:\n- dependency-name: DotNetProjectFile.Analyzers\n  dependency-version: 1.15.2\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\nCo-authored-by: Ivan Maximov <sungam3r@yandex.ru>",
+          "timestamp": "2026-08-13T12:52:09+03:00",
+          "tree_id": "f85b7641ddbe377251aa4ba3c647be90b942b579",
+          "url": "https://github.com/destructurama/json-net/commit/ed938c63c58d2299d52937e0fc60c2b15a609f3b"
+        },
+        "date": 1786614793158,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1402.4828631083171,
+            "unit": "ns",
+            "range": "± 17.23220510413834"
           }
         ]
       }
