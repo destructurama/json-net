@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1786598374463,
+  "lastUpdate": 1786598928228,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -2940,6 +2940,36 @@ window.BENCHMARK_DATA = {
             "value": 1885.9288178957427,
             "unit": "ns",
             "range": "± 10.863758704105448"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2e40789470edbd2d09ac19a03c31915f2df58470",
+          "message": "Bump actions/stale from 10 to 11 (#164)\n\nBumps [actions/stale](https://github.com/actions/stale) from 10 to 11.\n- [Release notes](https://github.com/actions/stale/releases)\n- [Changelog](https://github.com/actions/stale/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/stale/compare/v10...v11)\n\n---\nupdated-dependencies:\n- dependency-name: actions/stale\n  dependency-version: '11'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-13T08:27:39+03:00",
+          "tree_id": "6fecd111f2212db98de32b4e25178687ccd0317a",
+          "url": "https://github.com/destructurama/json-net/commit/2e40789470edbd2d09ac19a03c31915f2df58470"
+        },
+        "date": 1786598926999,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1844.9206761580247,
+            "unit": "ns",
+            "range": "± 17.616052760995586"
           }
         ]
       }
