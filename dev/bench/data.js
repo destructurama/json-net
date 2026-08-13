@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1786606463771,
+  "lastUpdate": 1786607153168,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -3150,6 +3150,36 @@ window.BENCHMARK_DATA = {
             "value": 1828.675161770412,
             "unit": "ns",
             "range": "± 16.827446163964137"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "61463f416151c69990ddfaefaaff586d584e33b6",
+          "message": "Bump Serilog from 4.3.0 to 4.4.0 (#159)\n\n---\nupdated-dependencies:\n- dependency-name: Serilog\n  dependency-version: 4.4.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\nCo-authored-by: Ivan Maximov <sungam3r@yandex.ru>",
+          "timestamp": "2026-08-13T10:44:46+03:00",
+          "tree_id": "fdabe4b90bc4b82e8d3aa8e421d3fc23ff826656",
+          "url": "https://github.com/destructurama/json-net/commit/61463f416151c69990ddfaefaaff586d584e33b6"
+        },
+        "date": 1786607152674,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1739.3509165900093,
+            "unit": "ns",
+            "range": "± 6.534409618244104"
           }
         ]
       }
