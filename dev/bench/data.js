@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1786637397056,
+  "lastUpdate": 1786710973175,
   "repoUrl": "https://github.com/destructurama/json-net",
   "entries": {
     "Benchmarks": [
@@ -3240,6 +3240,36 @@ window.BENCHMARK_DATA = {
             "value": 1815.3090366636004,
             "unit": "ns",
             "range": "± 8.7480825713574"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "31651c73a58f45d3b21592c59794a817c2b513b3",
+          "message": "Bump Microsoft.NET.Test.Sdk from 18.8.1 to 18.9.0 (#167)\n\n---\nupdated-dependencies:\n- dependency-name: Microsoft.NET.Test.Sdk\n  dependency-version: 18.9.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-14T15:35:07+03:00",
+          "tree_id": "8f039ad17c1c80d6d0cef66d41d22df8ee279003",
+          "url": "https://github.com/destructurama/json-net/commit/31651c73a58f45d3b21592c59794a817c2b513b3"
+        },
+        "date": 1786710972014,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Benchmarks.JsonNetBenchmarks.Destructure",
+            "value": 1985.52592086792,
+            "unit": "ns",
+            "range": "± 20.412648433933146"
           }
         ]
       }
